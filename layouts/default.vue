@@ -8,7 +8,6 @@
 </template>
 
 <script lang="ts" setup>
-
   console.log("Loaded");
 </script>
 

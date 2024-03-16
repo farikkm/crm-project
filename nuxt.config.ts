@@ -4,10 +4,22 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
-    'shadcn-nuxt'
+    'shadcn-nuxt',
+    'nuxt-icon',
+    [
+      '@nuxtjs/google-fonts', 
+      {
+        'families': {
+          'Lato': {
+            'wght': [300, 400, 700],
+            'ital': [300]
+          }
+        }
+      }
+    ],
   ],
   shadcn: {
-    prefix: '',
+    prefix: 'Ui',
     componentDir: './components/ui'
   }
 })
