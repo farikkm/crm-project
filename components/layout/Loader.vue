@@ -1,11 +1,11 @@
 <template>
-  <div class="wrapper">
-    <img src="loader.svg" alt="loader-img">
+  <div class="wrapper flex items-center justify-center w-screen h-screen">
+    <NuxtImg src="loader.svg" alt="loader-img" width="220" />
   </div>
 </template>
 
 <style scoped>
 .wrapper {
-  @apply bg-sidebar flex  items-center  justify-center w-screen h-screen
+  background-color: var(--sidebar)
 }
 </style>
