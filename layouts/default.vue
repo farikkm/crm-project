@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+  console.log("Loaded");
+</script>
+
 <template>
   <section class="grid" style="min-height: 100vh;">
     <LayoutSidebar />
@@ -6,10 +10,6 @@
     </div>
   </section>
 </template>
-
-<script lang="ts" setup>
-  console.log("Loaded");
-</script>
 
 <style scoped>
 .grid {
