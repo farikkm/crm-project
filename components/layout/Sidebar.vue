@@ -1,5 +1,21 @@
 <script lang="ts" setup>
+import { useAuthStore, useIsLoadingStore } from '~/store/auth.store';
 
+// Stores
+const isLoadingStore = useIsLoadingStore()
+const authStore = useAuthStore()
+
+// Router
+const router = useRouter()
+
+// Functions 
+const logout = async () => {
+  isLoadingStore.set(true)
+  await account.deleteSession('current')
+  authStore.clear()
+  await router.push('/login')
+  isLoadingStore.set(false)
+}
 </script>
 
 <template>
@@ -10,6 +26,7 @@
 
     <button
       class="absolute top-2 right-3 transition-colors hover:text-primary"
+      @click="logout"
     >
       <Icon name="line-md:logout" size="22"/>
     </button>
