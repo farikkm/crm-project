@@ -4,9 +4,8 @@ import { MENU_DATA } from './menu.data';
 
 <template>
   <div>
-    <!-- text-xl for 2K Monitors -->
     <NuxtLink 
-      class="flex items-center text-xl py-1 px-3 rounded-lg w-full hover:bg-gray-700 hover:shadow transition-all mb-3"
+      class="flex items-center text-sm py-1 px-3 rounded-lg w-full hover:bg-gray-700 hover:shadow transition-all mb-3"
       v-for="item in MENU_DATA" 
       :key="item.name"
       :to="item.url"
